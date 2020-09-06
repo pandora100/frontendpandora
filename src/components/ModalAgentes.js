@@ -5,8 +5,8 @@ import './ModalAgentes.css'
 import InputAgente from "./InputAgente.js";
 import InputAgenteDel from "./InputAgenteDel.js";
 import ListAgentes from "./ListAgentes.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
 function ModalAgentes ({ children,onClose}) {
  //<ListGrupos/> 

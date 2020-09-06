@@ -1,8 +1,8 @@
 //pandoraHeader1.js
 import React, { Fragment, useState } from "react";
-import logo1 from '../assets/custom_logo/logo1.png' ;
-import logo2 from '../assets/custom_logo/logo2.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import logo1 from '../assets/custom_logo/logo1.PNG' ;
+import logo2 from '../assets/custom_logo/logo2.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import './PandoraHeader1.css'
 const PandoraHeader1 = () => {
   /*

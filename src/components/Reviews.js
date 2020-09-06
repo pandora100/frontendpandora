@@ -1,9 +1,9 @@
 import React, { Fragment,useState,useEffect,useContext } from "react";
 import Marquee from "react-smooth-marquee"
-import pullup from '../assets/windowsIcons/pullup.png';
-import viewInfo from '../assets/windowsIcons/view-info.png';
-import folderSmall from '../assets/windowsIcons/folderSmall.png';
-import logogit from '../assets/logogit.png';
+import pullup from '../assets/windowsIcons/pullup.PNG';
+import viewInfo from '../assets/windowsIcons/view-info.PNG';
+import folderSmall from '../assets/windowsIcons/folderSmall.PNG';
+import logogit from '../assets/logogit.PNG';
 import './Reviews.css';
 import {RemoteContext} from "../context/RemotosContext.js"; 
  const Reviews=()=>{

@@ -1,10 +1,10 @@
 //Sidebar1.js
 import React, { Fragment, useState,useContext } from "react";
-import back from '../assets/windowsIcons/back.png';
+import back from '../assets/windowsIcons/back.PNG';
 import './Sidebar1.css'
-import pullup from '../assets/windowsIcons/pullup.png';
-import viewInfo from '../assets/windowsIcons/view-info.png';
-import folderSmall from '../assets/windowsIcons/folderSmall.png';
+import pullup from '../assets/windowsIcons/pullup.PNG';
+import viewInfo from '../assets/windowsIcons/view-info.PNG';
+import folderSmall from '../assets/windowsIcons/folderSmall.PNG';
 import logogit from '../assets/logogit.PNG';
 import ModalNewAlarmas from "./ModalNewAlarmas";
 import ModalDelAlarmas from "./ModalDelAlarmas";

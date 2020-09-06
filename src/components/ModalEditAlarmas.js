@@ -3,8 +3,8 @@ import React, { Fragment, useState, useContext } from "react";
 import ReactDOM from 'react-dom'
 import './ModalEditAlarmas.css'
 import ListSelectAlarm from "./ListSelectAlarm.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
 function ModalEditAlarmas ({ children,onClose,fila}) {
 

@@ -2,9 +2,9 @@
 import React, { Fragment, useState, useContext } from "react";
 import ReactDOM from 'react-dom'
 import './ModalStopProcs.css'
-import construccion from '../assets/windowsIcons/construccion.png';
-import cerrar3 from '../assets/custom_logo/cerrar3.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import construccion from '../assets/windowsIcons/construccion.PNG';
+import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
 
 

@@ -1,8 +1,8 @@
 //BarraHerramientasDel3.js
 //<Link to='/ModalModulos'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-//import back from '../assets/windowsIcons/back.PNG';
-import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.PNG';
+//import back from '../assets/windowsIcons/back.png';
+import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.png';
 import './BarraHerramientasDel3.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalModulos from "./ModalModulos";

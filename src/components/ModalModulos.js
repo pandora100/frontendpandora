@@ -5,8 +5,8 @@ import './ModalModulos.css'
 import InputModulo from "./InputModulo.js";
 import InputModuloDel from "./InputModuloDel.js";
 import ListModulos from "./ListModulos.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
 function ModalModulos ({ children,onClose}) {
  //<ListGrupos/> 

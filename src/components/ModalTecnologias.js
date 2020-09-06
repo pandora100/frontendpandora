@@ -5,8 +5,8 @@ import './ModalTecnologias.css'
 import InputGrupo from "./InputGrupo.js";
 import InputGrupoDel from "./InputGrupoDel.js";
 import ListGrupos from "./ListGrupos.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.png' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.png' ;
+import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
+import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
 function ModalTecnologias ({ children,onClose}) {
  //<ListGrupos/> 
