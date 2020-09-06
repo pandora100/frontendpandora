@@ -30,7 +30,7 @@ const InputGrupoDel = ({onClose}) => {
       console.log('InputGrupoDel 0009 description:',description);
       const body = { description };
       console.log('InputGrupoDel 10 body:',body);
-      const response = await fetch("http://localhost:5000/dashboard/grupos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "DELETE",
           headers: {
             "Content-type": "application/json",

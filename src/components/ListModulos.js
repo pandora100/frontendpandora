@@ -9,7 +9,7 @@ const ListModulos = () => {
 
   const getModulos = async () => {
     try {
-      const response = await fetch("http://localhost:5000/dashboard/modulos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/modulos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

@@ -26,7 +26,7 @@ const InputAgente = ({onClose}) => {
       console.log('InputAgente 07 description:',description);
       const body = { description,grupoSeleccionado };
       console.log('InputAgente 08 body:',body);
-      const response = await fetch("http://localhost:5000/dashboard/agentes", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/agentes", {
         method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -54,7 +54,7 @@ const InputAgente = ({onClose}) => {
   const obtenerInfoInicial= async ()=>{
   console.log('InputAgente A obtenerInfoInicial ejecutandose.'); 
   try {
-      const response = await fetch("http://localhost:5000/dashboard/grupos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

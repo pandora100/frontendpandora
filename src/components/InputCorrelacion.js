@@ -26,7 +26,7 @@ const InputCorrelacion = ({onClose}) => {
       console.log('InputCorrelacion 07 description:',description);
       const body = { description,grupoSeleccionado };
       console.log('InputCorrelacion 08 body:',body);
-      const response = await fetch("http://localhost:5000/dashboard/Correlaciones", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/Correlaciones", {
         method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -54,7 +54,7 @@ const InputCorrelacion = ({onClose}) => {
   const obtenerInfoInicial= async ()=>{
   console.log('InputCorrelacion A obtenerInfoInicial ejecutandose.'); 
   try {
-      const response = await fetch("http://localhost:5000/dashboard/grupos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

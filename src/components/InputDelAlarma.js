@@ -30,7 +30,7 @@ const InputDelAlarma = ({onCloseDel}) => {
       console.log('InputDelAlarma 0009 description:',description);
       const body = { description };
       console.log('InputDelAlarma 10 body:',body);
-      const response = await fetch("http://localhost:5000/dashboard/eventos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
         method: "DELETE",
           headers: {
             "Content-type": "application/json",
