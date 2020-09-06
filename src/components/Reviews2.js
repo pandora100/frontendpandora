@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Marquee from "react-smooth-marquee"
 import pullup from '../assets/pullup.GIF';
-import viewInfo from '../assets/windowsIcons/view-info.PNG';
+import viewInfo from '../assets/view-info.GIF';
 import folderSmall from '../assets/folderSmall.GIF';
 import logogit from '../assets/logogit.PNG';
 import './Reviews2.css'; 

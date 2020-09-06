@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import '@babel/polyfill'; 
 import { toast } from "react-toastify";
 import './Login.css';
-import folderSmall from '..assets/movilnet.GIF';
+import folderSmall from '../assets/movilnet.GIF';
 const Login = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
     email: "",

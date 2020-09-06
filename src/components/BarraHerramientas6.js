@@ -1,7 +1,7 @@
 //BarraHerramientas6.js
 //<Link to='/ModalStartProcs'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import dosnuevenueve from '../assets/dosnuevenueve.PNG';
+import dosnuevenueve from '../assets/dosnuevenueve.GIF';
 import './BarraHerramientas6.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalStartProcs from "./ModalStartProcs";

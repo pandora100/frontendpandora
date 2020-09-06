@@ -1,6 +1,6 @@
 //pandoraHeader1.js
 import React, { Fragment, useState } from "react";
-import windows from '../assetswindows.GIF';
+import windows from '../assets/windows.GIF';
 import './BarraPrincipal1.css'
 const BarraPrincipal1 = ({titulo}) => {
    

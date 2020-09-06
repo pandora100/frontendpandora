@@ -1,6 +1,6 @@
 //Contenido1.js
 import React, { Fragment, useState, useContext,useEffect,useRef } from "react";
-import back from '../assets/back.PNG';
+import back from '../assets/back.GIF';
 import './Contenido1.css'
 import { ReactTabulator } from "react-tabulator";
 import "../dist/css/tabulator.min.css";
