@@ -1,10 +1,6 @@
-//INDEX.JS
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-import React  from 'react';
-import  ReactDom  from 'react-dom';
-import App from './components/App/App.js';
-
- ReactDom.render(
- 	<App/>
- 
-,document.getElementById("index"));
+ReactDOM.render(<App />, document.getElementById("root"));

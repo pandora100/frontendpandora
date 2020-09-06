@@ -1,0 +1,22 @@
+/*Header.css*/
+
+
+.gf-header-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color:  black;
+   margin: 0px 0px;
+  
+}
+.gf-header-container a{
+   color: red;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 4px ;
+
+}
+
+.gf-header-container a + a {
+  margin: 0px 12px;
+}
