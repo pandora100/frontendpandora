@@ -33,7 +33,7 @@ function App() {
  console.log('App 01 RemoteProvider:',RemoteProvider);
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("http://localhost:5000/authentication/verify", {
+      const res = await fetch("http://backendpandoragui.herokuapp.com/authentication/verify", {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });

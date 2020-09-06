@@ -22,7 +22,7 @@ const Login = ({ setAuth }) => {
       const body = { email, password };
         console.log('Login 1 body:',body);
       const response = await fetch(
-        "http://localhost:5000/authentication/login",
+        "http://backendpandoragui.herokuapp.com/authentication/login",
         {
           method: "POST",
           headers: {

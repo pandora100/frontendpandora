@@ -17,7 +17,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/eventos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -40,7 +40,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/grupos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -63,7 +63,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/correlaciones", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/correlaciones", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -86,7 +86,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/dependenciasagentes", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/dependenciasagentes", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -110,7 +110,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/dependenciasmodulos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/dependenciasmodulos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -134,7 +134,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://localhost:5000/dashboard/estadisticas", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/estadisticas", {
         method: "GET",
           headers: {
             "Content-type": "application/json",

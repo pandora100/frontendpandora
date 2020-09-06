@@ -34,7 +34,7 @@ const Dashboard = ({setAuth}) => {
   const [dateTime, setDateTime] = useState(new Date());
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:5000/dashboard/", {
+      const res = await fetch("http://backendpandoragui.herokuapp.com/dashboard/", {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });
