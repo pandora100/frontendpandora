@@ -2,7 +2,7 @@ import React, { Fragment,useState,useEffect,useContext } from "react";
 import Marquee from "react-smooth-marquee"
 import pullup from '../assets/windowsIcons/pullup.PNG';
 import viewInfo from '../assets/windowsIcons/view-info.PNG';
-import folderSmall from '../assets/windowsIcons/folderSmall.PNG';
+import folderSmall from '../assets/folderSmall.PNG';
 import logogit from '../assets/logogit.PNG';
 import './Reviews.css';
 import {RemoteContext} from "../context/RemotosContext.js"; 

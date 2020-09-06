@@ -4,7 +4,7 @@ import back from '../assets/windowsIcons/back.PNG';
 import './Sidebar1.css'
 import pullup from '../assets/windowsIcons/pullup.PNG';
 import viewInfo from '../assets/windowsIcons/view-info.PNG';
-import folderSmall from '../assets/windowsIcons/folderSmall.PNG';
+import folderSmall from '../assets/folderSmall.PNG';
 import logogit from '../assets/logogit.PNG';
 import ModalNewAlarmas from "./ModalNewAlarmas";
 import ModalDelAlarmas from "./ModalDelAlarmas";
