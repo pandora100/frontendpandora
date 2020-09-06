@@ -1,7 +1,7 @@
 //BarraHerramientas1.js
 //<Link to='/ModalAgentes'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.PNG';
+import unocuatrosiete from '../assets/unocuatrosiete.GIF';
 import './BarraHerramientasDel2.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalAgentes from "./ModalAgentes";

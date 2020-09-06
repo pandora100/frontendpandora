@@ -2,7 +2,7 @@
 //<Link to='/ModalModulos'></Link> 
 import React, { Fragment, useState,useContext } from "react";
 //import back from '../assets/windowsIcons/back.PNG';
-import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.PNG';
+import unocuatrosiete from '../assets/unocuatrosiete.GIF';
 import './BarraHerramientasDel3.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalModulos from "./ModalModulos";

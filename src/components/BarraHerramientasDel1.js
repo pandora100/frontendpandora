@@ -1,7 +1,7 @@
 //BarraHerramientas1.js
 //<Link to='/ModalTecnologias'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.PNG';
+import unocuatrosiete from '../assets/unocuatrosiete.GIF';
 import './BarraHerramientasDel1.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalTecnologias from "./ModalTecnologias";

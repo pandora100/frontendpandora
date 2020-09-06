@@ -1,7 +1,7 @@
 //BarraHerramientas7.js
 //<Link to='/ModalStopProcs'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import unocuatrosiete from '../assets/windowsIcons/unocuatrosiete.PNG';
+import unocuatrosiete from '../assets/unocuatrosiete.GIF';
 import './BarraHerramientas7.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalStopProcs from "./ModalStopProcs";
