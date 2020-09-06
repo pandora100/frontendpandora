@@ -1,8 +1,8 @@
 //BarraHerramientas4.js
 //<Link to='/ModalCorrelaciones'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-//import back from '../assets/windowsIcons/back.PNG';
-import pinball from '../assets/windowsIcons/pinball.PNG';
+
+import pinball from '../assets/pinball.GIF';
 import './BarraHerramientas4.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalCorrelaciones from "./ModalCorrelaciones";

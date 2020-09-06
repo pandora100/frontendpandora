@@ -1,7 +1,7 @@
 //BarraHerramientas8.js
 //<Link to='/ModalHistoricos'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import seissiete from '../assets/windowsIcons/seissiete.PNG';
+import seissiete from '../assets/seissiete.GIF';
 import './BarraHerramientas8.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalHistoricos from "./ModalHistoricos";

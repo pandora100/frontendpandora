@@ -1,7 +1,7 @@
 //BarraHerramientas9.js
 //<Link to='/ModalConfigs'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import cincosiete from '../assets/windowsIcons/cincosiete.PNG';
+import cincosiete from '../assets/cincosiete.GIF';
 import './BarraHerramientas9.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalConfigs from "./ModalConfigs";

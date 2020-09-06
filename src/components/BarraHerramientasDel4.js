@@ -1,7 +1,7 @@
 //BarraHerramientasDel4.js
 //<Link to='/ModalCorrelaciones'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import unocuatrosiete from '../assets/unocuatrosiete.PNG';
+import unocuatrosiete from '../assets/unocuatrosiete.GIF';
 import './BarraHerramientasDel2.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalCorrelaciones from "./ModalCorrelaciones";

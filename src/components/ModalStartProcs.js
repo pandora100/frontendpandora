@@ -2,7 +2,7 @@
 import React, { Fragment, useState, useContext } from "react";
 import ReactDOM from 'react-dom'
 import './ModalStartProcs.css'
-import construccion from '../assets/windowsIcons/construccion.PNG';
+import construccion from '../assets/construccion.GIF';
 import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
 import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";

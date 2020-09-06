@@ -1,8 +1,8 @@
 //BarraHerramientas3.js
 //<Link to='/ModalModulos'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-//import back from '../assets/windowsIcons/back.PNG';
-import cincocuatroseis from '../assets/windowsIcons/cincocuatroseis.PNG';
+
+import cincocuatroseis from '../assets/cincocuatroseis.GIF';
 import './BarraHerramientas3.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalModulos from "./ModalModulos";

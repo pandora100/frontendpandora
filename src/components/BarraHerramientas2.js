@@ -1,7 +1,7 @@
 //BarraHerramientas2.js
 //<Link to='/ModalAgentes'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import sietecuatrocuatro from '../assets/windowsIcons/sietecuatrocuatro.PNG';
+import sietecuatrocuatro from '../assets/sietecuatrocuatro.GIF';
 import './BarraHerramientas2.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalAgentes from "./ModalAgentes";

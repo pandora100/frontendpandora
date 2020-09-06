@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Marquee from "react-smooth-marquee"
-import pullup from '../assets/windowsIcons/pullup.PNG';
+import pullup from '../assets/pullup.GIF';
 import viewInfo from '../assets/windowsIcons/view-info.PNG';
 import folderSmall from '../assets/folderSmall.GIF';
 import logogit from '../assets/logogit.PNG';
