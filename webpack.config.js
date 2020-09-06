@@ -9,41 +9,43 @@ module.exports = {
   },
   module: {
     rules: [
+       {
+       test: /\.(jpe?g|png|gif|svg)$/i,
+        use: {
+          loader: "file-loader",
+            options: {
+              query: {
+                name:'assets/[name].[ext]'
+              }
+            }
+            }
+          },
+
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-         
+          loader: "babel-loader"
         }
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader",
-            test: /\.css$/
+            loader: "style-loader"
           },
           {
             loader: "css-loader",
-            test: /\.css$/
-             
-          },
-          {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
             options: {
-              query: {
-                name:'assets/[name].[ext]'
-              }
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[name]_[local]_[hash:base64]",
+              sourceMap: true,
+              minimize: true
             }
           }
         ]
       }
     ]
- }
-  ]
   }
 };
