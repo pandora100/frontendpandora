@@ -39,12 +39,7 @@ module.exports = {
                 name:'assets/[name].[ext]'
               }
             }
-          },
-          {
-            loader: 'image-webpack-loader',
-            
-            }   
-          
+          }
         ]
       }
     ]
