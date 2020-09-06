@@ -50,5 +50,7 @@ module.exports = {
         ]
       }
     ]
+ }
+  ]
   }
 };
