@@ -5,7 +5,7 @@ import './Sidebar1.css'
 import pullup from '../assets/windowsIcons/pullup.png';
 import viewInfo from '../assets/windowsIcons/view-info.png';
 import folderSmall from '../assets/windowsIcons/folderSmall.png';
-import logogit from '../assets/logogit.png';
+import logogit from '../assets/logogit.PNG';
 import ModalNewAlarmas from "./ModalNewAlarmas";
 import ModalDelAlarmas from "./ModalDelAlarmas";
 import ModalCorrActivas from "./ModalCorrActivas";
