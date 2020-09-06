@@ -14,9 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-           plugins: [require('babel-plugin-transform-object-rest-spread')]
-        },
+         
         }
       },
       {
