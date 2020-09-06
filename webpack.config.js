@@ -29,13 +29,7 @@ module.exports = {
           {
             loader: "css-loader",
             test: /\.css$/
-             options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
-              minimize: true
-            }
+             
           },
           {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -50,18 +44,7 @@ module.exports = {
           },
           {
             loader: 'image-webpack-loader',
-            options: {
-              query: {
-                mozjpeg: {
-                  progressive: true,
-                },
-                gifsicle: {
-                  interlaced: true,
-                },
-                optipng: {
-                  optimizationLevel: 7,
-                }
-              }
+            
             }   
           }
         ]
