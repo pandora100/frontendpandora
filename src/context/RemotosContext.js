@@ -155,7 +155,7 @@ let {Provider,Consumer}=RemoteContext;
   };
       const checkAuthenticated2 = async () => {
     try {
-      const res = await fetch("http://localhost:5000/authentication/verify", {
+      const res = await fetch("http://backendpandoragui.herokuapp.com/authentication/verify", {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });
