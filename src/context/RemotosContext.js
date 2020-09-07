@@ -151,16 +151,44 @@ let {Provider,Consumer}=RemoteContext;
       console.error(err.message);
        toast.error(parseRes);
     }
-
+    
   };
-    useEffect(() => {
+      const checkAuthenticated2 = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/authentication/verify", {
+        method: "POST",
+        headers: { jwt_token: localStorage.token }
+      });
+
+      const parseRes = await res.json();
+
+    if (parseRes === true) { 
+     
+    console.log('TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT');
     buscarGifs();
     buscarTecnologias();
     buscarCorrelaciones();
     buscarAgentes();
     buscarModulos();
     buscarEstadisticas();
-   }, []);
+   }else {
+    console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
+   }
+    
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+    
+    useEffect(() => {
+    const timer = setTimeout(() => {
+    checkAuthenticated2();
+     }, 10000);
+    
+    return () => clearTimeout(timer); 
+   
+   }, [checkAuthenticated2]);
+
      return <Provider value={{ gifs,tecnologias,correlaciones,agentes,modulos,estadisticas }}>
     {children}
    

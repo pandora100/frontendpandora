@@ -25,12 +25,12 @@ toast.configure();
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
- console.log('App 0.1 ModalContext:',ModalContext);
- console.log('App 0.6 ModalContext.Provider:',ModalContext.Provider);
- console.log('App 1 ModalProvider:',ModalProvider);
- console.log('App 00.1 RemoteContext:',RemoteContext);
- console.log('App 00.6 RemoteContext.Provider:',RemoteContext.Provider);
- console.log('App 01 RemoteProvider:',RemoteProvider);
+ //console.log('App 0.1 ModalContext:',ModalContext);
+ //console.log('App 0.6 ModalContext.Provider:',ModalContext.Provider);
+ //console.log('App 1 ModalProvider:',ModalProvider);
+ //console.log('App 00.1 RemoteContext:',RemoteContext);
+ //console.log('App 00.6 RemoteContext.Provider:',RemoteContext.Provider);
+ //console.log('App 01 RemoteProvider:',RemoteProvider);
   const checkAuthenticated = async () => {
     try {
       const res = await fetch("http://backendpandoragui.herokuapp.com/authentication/verify", {
