@@ -4,7 +4,7 @@ import '@babel/polyfill';
 import { toast } from "react-toastify";
 let RemoteContext = React.createContext({});
 let {Provider,Consumer}=RemoteContext;
-  function RemoteProvider ({children}) {
+  function RemoteProvider ({children,setAuth}) {
   
   let [gifs, setGifs] = React.useState([]);
   let [tecnologias, setTecnologias] = React.useState([]);
