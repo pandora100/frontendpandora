@@ -32,7 +32,7 @@ return (
                   src={logogit}
                   alt=""
                  
-                />Total HUAWEI_GSM: {estagifs[0]}
+                />Total HUA_GSM: {estagifs[0]}
 </div>
 </div>
 <div className="reviews__content__left_huaumts">
@@ -41,7 +41,7 @@ return (
                   src={logogit}
                   alt=""
                  
-                />Total HUAWEI_UMTS: {estagifs[1]}
+                />Total HUA_UMTS: {estagifs[1]}
 </div> 
 </div>
 <div className="reviews__content__left_flexent">

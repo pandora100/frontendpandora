@@ -24,7 +24,7 @@ const BarraHerramientasDel3 = ({t1}) => {
     {isModalModulosOpen && <ModalModulos onClose={onClose}/>}
         
           <img onClick={onClose} className="com__function_bar__icon" src={unocuatrosiete} alt="xxxxxx" />
-          <span className="com__function_bar__text">{t1}</span>
+          <span className="com__function_bar__text">Del Mod</span>
           
          </div>
         </section>
