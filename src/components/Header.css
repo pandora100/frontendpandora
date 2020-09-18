@@ -2,8 +2,8 @@
 .header-title-bar-img-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  margin: 0px 0px;
+  justify-content:center;
+  margin: auto;
   width: 100%;
   background-color: black;
  }
