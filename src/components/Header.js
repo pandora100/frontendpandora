@@ -7,11 +7,9 @@ const Header = () => {
   
   return (
     <React.Fragment>
-      <div className='header-title-bar-img'>
-      <img src={boliv2}/>
-      
-      </div> 
+     
      <div className='gf-header-container'>
+       <img src={boliv2}/>
       <div className='gf-header-container-left'>
       <Link to='#'><i className="fas fa-tv"></i>
         {" "}Administracion de Gestores Cirs & Sopoges
