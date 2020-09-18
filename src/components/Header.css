@@ -2,12 +2,16 @@
 .header-title-bar-img-container {
   display: flex;
   flex-direction: row;
-  justify-content:stretch;
+  justify-content:space-between;
   margin: 0px 0px;
   width: 100%;
+  background-color: black;
  }
 .header-title-bar-img {
   background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
 }
 .gf-header-container {
   width: 100%;
