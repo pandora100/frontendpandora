@@ -1,11 +1,14 @@
 /*Header.css*/
-
+.header-title-bar-img {
+  width: 100%;
+}
 .gf-header-container {
   width: 100%;
 }
 
 .gf-header-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color:  black;
   margin: 0px 0px;
@@ -14,7 +17,7 @@
 
 .gf-header-container-left a{
   font-family:sans-serif;
-  color: yellow;
+  color: white;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
