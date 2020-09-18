@@ -11,20 +11,20 @@ import ModalEditAlarmas from "./ModalEditAlarmas";
 import moment from "moment";
 
 const Contenido1 = ({t1,onClose}) => {
-  console.log('!!!!!!!!!!!!!Contenido1 01 RemoteContext:',RemoteContext);
+  //console.log('!!!!!!!!!!!!!Contenido1 01 RemoteContext:',RemoteContext);
    const {gifs} = useContext(RemoteContext); 
    const { isModalEditAlarmasOpen,setIsModalEditAlarmasOpen,t1ModalEditAlarmas,setT1ModalEditAlarmas} = useContext(ModalContext); 
    let [fila,setFila] = useState(1);  
-   console.log('!!!!!!!!!!!!!Contenido1145 fila :',fila);
+   //console.log('!!!!!!!!!!!!!Contenido1145 fila :',fila);
    const referencia = useRef(); 
-   console.log('!!!!!!!!!!!!!Contenido1 11 gifs:',gifs);
-   console.log('!!!!!!!!!!!!!Contenido1 22 gifs.msg:',gifs.msg);
+   //console.log('!!!!!!!!!!!!!Contenido1 11 gifs:',gifs);
+   //console.log('!!!!!!!!!!!!!Contenido1 22 gifs.msg:',gifs.msg);
    // referencia.download("xlsx", "data.xlsx", {
    //   sheetName: "Export to Excel"
    //     }); 
     
    if (gifs.msg ==="Token is not valid"){
-   console.log('!!!!!!!!!!!!!Contenido1 33 jwt malformed...');
+   //console.log('!!!!!!!!!!!!!Contenido1 33 jwt malformed...');
    useEffect(() => {
   return <Redirect to="/login" className="irALogin">Login</Redirect>
    
@@ -36,20 +36,20 @@ const Contenido1 = ({t1,onClose}) => {
 
    }
    else{
-    console.log('Contenido1144 jwt valido.'); 
+    //console.log('Contenido1144 jwt valido.'); 
     
 
     const onCloseEdit=(e,row)=>{
       
-     console.log("Contenido1146 rowClick row.getData():", row.getData()); 
+     //console.log("Contenido1146 rowClick row.getData():", row.getData()); 
       let tmprow=row.getData();
-      console.log("Contenido1147 rowClick tmprow:", tmprow);
-       console.log("Contenido1148 rowClick tmprow.id_evento:", tmprow.id_evento);   
+      //console.log("Contenido1147 rowClick tmprow:", tmprow);
+       //console.log("Contenido1148 rowClick tmprow.id_evento:", tmprow.id_evento);   
      
       setFila(tmprow.id_evento);
       onClose();
       
-      console.log('!!!!!!!!!!!!!Contenido1149 rowClick fila:',fila);
+      //console.log('!!!!!!!!!!!!!Contenido1149 rowClick fila:',fila);
                      
                       
                      };  
@@ -72,17 +72,17 @@ const Contenido1 = ({t1,onClose}) => {
             { title: "evento", field: "nombremo", width: 300 },
             {title: "duracion", field: "utimestamp", width: 125, formatter:function(cell, formatterParams, onRendered){
                         var value = cell.getValue();
-                        //console.log('111 value:',value)
+                        ////console.log('111 value:',value)
                         var now = moment().unix();  
-                        //console.log('112 now:',now)
+                        ////console.log('112 now:',now)
                         var duration = now - value ;                      
-                        //console.log('113 duration:',duration);
+                        ////console.log('113 duration:',duration);
                         var horas = duration/3600;
                         var dias = duration/86400;
                         var minutos = duration/60;
-                       // console.log('114 horas:',horas);
-                       // console.log('115 dias:',dias);
-                       // console.log('116 minutos:',minutos);
+                       // //console.log('114 horas:',horas);
+                       // //console.log('115 dias:',dias);
+                       // //console.log('116 minutos:',minutos);
                         if(horas<1){
                         return minutos.toFixed(2) + " minutos atrás";
                         }

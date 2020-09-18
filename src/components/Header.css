@@ -1,4 +1,7 @@
 /*Header.css*/
+.header-title-bar-img {
+  width: 100%;
+}
 .gf-header-container {
   width: 100%;
 }
@@ -12,17 +15,18 @@
 }
 
 .gf-header-container-left a{
-   color: yellow;
+  font-family:sans-serif;
+  color: yellow;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
   padding: 4px ;
-
 }
 .gf-header-container-right a{
+   font-family:sans-serif;
    color: red;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
   padding: 4px ;
 
