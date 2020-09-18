@@ -22,7 +22,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("https://backendpandoragui.herokuapp.com/dashboard/eventos", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",

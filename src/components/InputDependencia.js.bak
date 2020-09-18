@@ -4,6 +4,7 @@ import '@babel/polyfill';
 import { toast } from "react-toastify";
 import {RemoteContext} from "../context/RemotosContext.js";
 import moment from "moment";
+import './InputDependencia.css'
 const InputDependencia = ({onClose}) => {
  
   const {tecnologias,agentes,modulos} = useContext(RemoteContext);
@@ -48,7 +49,7 @@ const InputDependencia = ({onClose}) => {
     
       const body = { tecnologiasSeleccionado,agentesSeleccionado,modulosSeleccionado,criticitySeleccionado,estadoSeleccionado,timestamp,utimestamp,usercomment};
       //console.log('InputDependencia 12 body:',body);
-      const response = await fetch("http://localhost:5000/dashboard/eventos", {
+      const response = await fetch("https://backendpandoragui.herokuapp.com/dashboard/eventos", {
         method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -158,7 +159,7 @@ const agentes = [
   
   return (
     <React.Fragment>
-    
+       <div className='new-container-ch'> 
       <form onSubmit={handleSubmit}>
        
          <select onChange={handleTypeChangeTecnologias}>
@@ -216,6 +217,7 @@ const agentes = [
         <br/>        
         <button type="submit">Insertar Alarma</button>
         </form> 
+        </div>
     </React.Fragment>
   );
 };
