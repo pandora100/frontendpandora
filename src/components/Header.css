@@ -1,4 +1,11 @@
 /*Header.css*/
+.header-title-bar-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:stretch;
+  margin: 0px 0px;
+  width: 100%;
+ }
 .header-title-bar-img {
   width: 100%;
 }
@@ -8,7 +15,7 @@
 
 .gf-header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   background-color:  black;
   margin: 0px 0px;
@@ -19,7 +26,7 @@
   font-family:sans-serif;
   color: white;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 400;
   text-decoration: none;
   padding: 4px ;
 }
@@ -27,7 +34,7 @@
    font-family:sans-serif;
    color: red;
   font-size: 18px;
-   
+  font-weight: 400; 
   text-decoration: none;
   padding: 4px ;
 
