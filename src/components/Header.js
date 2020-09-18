@@ -15,7 +15,7 @@ const Header = () => {
      <div className='gf-header-container'>
       <div className='gf-header-container-left'>
       <Link to='#'><i className="fas fa-tv"></i>
-        {" "}Administracion de Gestores Cirs & Sopoges
+        {" "}Administracion de Gestores Cirs
         </Link>
         </div>
       <div className='gf-header-container-right'>  
