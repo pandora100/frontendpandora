@@ -5,9 +5,9 @@ import './ModalModulos.css'
 import InputModulo from "./InputModulo.js";
 import InputModuloDel from "./InputModuloDel.js";
 import ListModulos from "./ListModulos.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
+
 import {ModalContext} from "../context/ModalesContext.js";
+import gindowsoff from '../assets/gindowsoff.GIF' ;
 function ModalModulos ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalModulos} = useContext(ModalContext); 
@@ -18,13 +18,11 @@ console.log('ModalModulos 33 t1ModalModulos:',t1ModalModulos);
 let t1ModalModulosdecision=t1ModalModulos;
   return <div className='modal'>
     <div className='modal-content'>
-      <div className='title-bar'>
-      <button onClick={onClose} ><img src={cerrar3}/></button>
-      <span className='title-bar-text'>Lista de Modulos</span>  
-      </div> 
-      <div className='title-bar-img'>
-      <img src={movilnettest1}/>
-      </div> 
+       <header className="new-header">
+      <span className="new-header__text">Lista de Modulos</span>
+      <img src={gindowsoff} alt="" className="new-header__img" />
+    </header>
+      <div className='new-container-ch'>  
       {children}
       <br/>
         <br/>
@@ -37,8 +35,14 @@ let t1ModalModulosdecision=t1ModalModulos;
       </div>
      {t1ModalModulosdecision ==='Add Modulo' ? <h3 className='titulo'>Añadir Modulo</h3> : <h3 className='titulo'>Eliminar Modulo</h3>}  
       <ListModulos/> 
+     <footer className="footer">
+      <button onClick={onClose} className="footer__button">
+      Cancel
+      </button>
+      </footer>
      </div>
      </div>
+      </div>
 }
 export default function ModalPortal ({children,onClose}) {
   console.log('Dentro del ModalPortal....'); 

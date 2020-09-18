@@ -10,7 +10,7 @@ const ListSelectAlarm = ({fila}) => {
   const getSelectAlarm = async () => {
     try {
       
-        const response = await fetch(`http://backendpandoragui.herokuapp.com/dashboard/eventos/${fila}`, {
+        const response = await fetch(`https://backendpandoragui.herokuapp.com/dashboard/eventos/${fila}`, {
         method: "GET",
           headers: {jwt_token: localStorage.token}
       });

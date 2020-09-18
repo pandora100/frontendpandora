@@ -5,9 +5,9 @@ import './ModalCorrelaciones.css'
 import InputCorrelacion from "./InputCorrelacion.js";
 import InputCorrelacionDel from "./InputCorrelacionDel.js";
 import ListCorrelaciones from "./ListCorrelaciones.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
+
 import {ModalContext} from "../context/ModalesContext.js";
+import gindowsoff from '../assets/gindowsoff.GIF' ;
 function ModalCorrelaciones ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalCorrelaciones} = useContext(ModalContext); 
@@ -18,16 +18,14 @@ console.log('ModalCorrelaciones 33 t1ModalCorrelaciones:',t1ModalCorrelaciones);
 let t1ModalCorrelacionesdecision=t1ModalCorrelaciones;
   return <div className='modal'>
     <div className='modal-content'>
-      <div className='title-bar'>
-      <button onClick={onClose} ><img src={cerrar3}/></button>
-      <span className='title-bar-text'>Lista de Correlaciones</span>  
-      </div> 
-      <div className='title-bar-img'>
-      <img src={movilnettest1}/>
-      </div> 
+       <header className="new-header">
+      <span className="new-header__text">Lista de Correlaciones de Expert</span>
+      <img src={gindowsoff} alt="" className="new-header__img" />
+    </header>
+       <div className='new-container-ch'>  
       {children}
       <br/>
-        <br/>
+      <br/>
       
        <div className='formulario'> 
        {t1ModalCorrelacionesdecision ==='Add Corr' ? console.log('!!!!!!!!:',true) :  console.log('!!!!!!!!:',false)}  
@@ -37,6 +35,12 @@ let t1ModalCorrelacionesdecision=t1ModalCorrelaciones;
       </div>
      {t1ModalCorrelacionesdecision ==='Add Corr' ? <h3 className='titulo'>Añadir Correlacion</h3> : <h3 className='titulo'>Eliminar Correlacion</h3>}  
       <ListCorrelaciones/> 
+       <footer className="footer">
+        <button onClick={onClose} className="footer__button">
+          Cancel
+        </button>
+      </footer>
+     </div>
      </div>
      </div>
 }

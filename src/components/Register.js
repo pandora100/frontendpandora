@@ -21,7 +21,7 @@ const Register = ({ setAuth }) => {
        //console.log('Register 1 body.name:',body.name);
        /**/
         const response =  await fetch(
-        "http://backendpandoragui.herokuapp.com/authentication/register",
+        "https://backendpandoragui.herokuapp.com/authentication/register",
         {
           method: "POST",
           headers: {

@@ -5,9 +5,8 @@ import './ModalAgentes.css'
 import InputAgente from "./InputAgente.js";
 import InputAgenteDel from "./InputAgenteDel.js";
 import ListAgentes from "./ListAgentes.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
+import gindowsoff from '../assets/gindowsoff.GIF' ;
 function ModalAgentes ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalAgentes} = useContext(ModalContext); 
@@ -16,15 +15,21 @@ console.log('ModalAgentes 1 onClose:',onClose);
 console.log('ModalAgentes 32 {t1ModalAgentes}:',{t1ModalAgentes});
 console.log('ModalAgentes 33 t1ModalAgentes:',t1ModalAgentes); 
 let t1ModalAgentesdecision=t1ModalAgentes;
+
+
+
   return <div className='modal'>
-    <div className='modal-content'>
-      <div className='title-bar'>
-      <button onClick={onClose} ><img src={cerrar3}/></button>
-      <span className='title-bar-text'>Lista de Agentes</span>  
-      </div> 
-      <div className='title-bar-img'>
-      <img src={movilnettest1}/>
-      </div> 
+
+
+
+      <div className='modal-content'>
+      <header className="new-header">
+      <span className="new-header__text">Lista de Agentes</span>
+      <img src={gindowsoff} alt="" className="new-header__img" />
+    </header>
+
+      
+      <div className='new-container-ch'>  
       {children}
       <br/>
         <br/>
@@ -36,7 +41,18 @@ let t1ModalAgentesdecision=t1ModalAgentes;
        
       </div>
       {t1ModalAgentesdecision ==='Add Agente' ? <h3 className='titulo'>Añadir Agente</h3> : <h3 className='titulo'>Eliminar Agente</h3>}  
+      
+
       <ListAgentes/> 
+      
+
+      <footer className="footer">
+        <button onClick={onClose} className="footer__button">
+          Cancel
+        </button>
+      </footer>
+      </div>
+     
      </div>
      </div>
 }

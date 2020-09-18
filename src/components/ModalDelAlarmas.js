@@ -3,9 +3,8 @@ import React, { Fragment, useState , useContext} from "react";
 import ReactDOM from 'react-dom'
 import './ModalDelAlarmas.css'
 import InputDelAlarma from "./InputDelAlarma.js";
-import cerrar3 from '../assets/custom_logo/cerrar3.PNG' ;
-import movilnettest1 from '../assets/custom_logo/movilnettest1.PNG' ;
 import {ModalContext} from "../context/ModalesContext.js";
+import gindowsoff from '../assets/gindowsoff.GIF' ;
 function ModalDelAlarmas ({ children,onCloseDel}) {
 
  const {t1ModalDelAlarmas} = useContext(ModalContext); 
@@ -15,14 +14,15 @@ function ModalDelAlarmas ({ children,onCloseDel}) {
 //console.log('ModalDelAlarmas 33 t1ModalDelAlarmas:',t1ModalDelAlarmas); 
 
   return <div className='modal'>
-    <div className='modal-content'>
-      <div className='title-bar'>
-      <button onClick={onCloseDel} ><img src={cerrar3}/></button>
-      <span className='title-bar-text'>Eliminar Alarma</span>  
-      </div> 
-      <div className='title-bar-img'>
-      <img src={movilnettest1}/>
-      </div> 
+   
+     <div className='modal-content'>
+       <header className="new-header">
+      <span className="new-header__text">eLIMINAR alarma en Pandora</span>
+      <img src={gindowsoff} alt="" className="new-header__img" />
+    </header>
+
+
+      <div className='new-container-ch'>  
       {children}
       <br/>
 
@@ -31,9 +31,16 @@ function ModalDelAlarmas ({ children,onCloseDel}) {
        <div className='formulario'>
        <InputDelAlarma onCloseDel={onCloseDel}/> 
       </div>
-       
       
+     
+     
+     </div>
       
+      <footer className="footer">
+      <button onClick={onCloseDel} className="footer__button">
+          Cancel
+      </button>
+      </footer>
       
      </div>
      </div>

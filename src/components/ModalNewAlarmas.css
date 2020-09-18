@@ -1,3 +1,4 @@
+/*
 .modal {
   background-color: rgba(255, 255, 255, .1);
   backdrop-filter: blur(4px);
@@ -11,8 +12,8 @@
 
 .modal-content {
   
-  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC); 
+  background: linear-gradient(to right, #2B32B2, #1488CC); 
   width: 542px;
   height: 80vh;
   margin: 10vh auto;
@@ -61,3 +62,85 @@
     color:black;
    text-align: center;
 }
+*/
+
+.modal {
+  background-color: rgba(255, 255, 255, .99);
+  
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC); 
+  background: linear-gradient(to right, #2B32B2, #1488CC); 
+  
+  width: 542px;
+  height: 35vh;
+  margin: 10vh auto;
+  position: relative;
+  color: black;
+}
+
+.new-header {
+    height: 42px;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    background: #092178;
+  }
+  .new-header__text {
+    font-weight: 700;
+    font-size: 17px;
+    font-family: 'Noto Sans';
+    color: #fff;
+    flex: 1;
+    color: yellow;
+  }
+  .new-header__img {
+    width: auto;
+    height: 30px;
+    margin-right: 5px;
+  }
+ .new-container-ch {
+    background: orange;
+  }
+  .formulario{
+  
+  display: flex;
+  align-items: center;
+  margin: auto;
+ justify-content: center;
+ 
+}
+
+ .titulo {
+    color:black;
+   text-align: center;
+}
+
+ .footer {
+    height:75px;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__button {
+    font-size: 12px;
+    padding: 0 8px;
+    line-height: 10px;
+    background: rgb(240, 240, 240);
+    margin-right: 10px;
+    height: 16px;
+    border-radius: 1px;
+    box-shadow: 2px 2px 4px 1px #0005b0, 2px 2px 2px 0px white,
+      inset 0 0 0 1px skyblue, inset 2px -2px skyblue;
+    border: none;
+    outline: none;
+   
+  }
