@@ -1,7 +1,7 @@
 //BarraHerramientas6.js
 //<Link to='/ModalStartProcs'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import dosnuevenueve from '../assets/dosnuevenueve.GIF';
+import sietecuatro from '../assets/sietecuatro.GIF';
 import './BarraHerramientas6.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalStartProcs from "./ModalStartProcs";
@@ -21,15 +21,10 @@ const BarraHerramientas6 = ({t1}) => {
                           
   return (
     <React.Fragment>
-     <section className="com__function_bar">
-        <div className="com__function_bar__button--disable">
+   
     {isModalStartProcsOpen && <ModalStartProcs onClose={onClose}/>}
-        
-          <img onClick={onClose} className="com__function_bar__icon" src={dosnuevenueve} alt="xxxxxx" />
-          <span className="com__function_bar__text">{t1}</span>
-          
-         </div>
-        </section>
+        <img  onClick={onClose} className="com__function_bar__icon" src={sietecuatro} alt="xxxxxx" title="Arrancar Proceso"/> 
+         
     </React.Fragment>
   );
 };

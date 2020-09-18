@@ -18,7 +18,7 @@ const Register = ({ setAuth }) => {
     e.preventDefault();
     try {
       const body = { email, password, name };
-       console.log('Register 1 body.name:',body.name);
+       //console.log('Register 1 body.name:',body.name);
        /**/
         const response =  await fetch(
         "http://backendpandoragui.herokuapp.com/authentication/register",
@@ -31,11 +31,11 @@ const Register = ({ setAuth }) => {
         }
       );
       const parseRes = await response.json();
-      console.log('Register 2 parseRes:',parseRes);
+      //console.log('Register 2 parseRes:',parseRes);
        if (parseRes.jwtToken) {
         localStorage.setItem("token", parseRes.jwtToken);
         setAuth(true);
-         console.log('Register 3 localStorage.token:',localStorage.token);
+         //console.log('Register 3 localStorage.token:',localStorage.token);
           toast.success("Register Successfully");
          
         }else {

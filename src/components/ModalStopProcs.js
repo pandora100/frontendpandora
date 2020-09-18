@@ -11,10 +11,10 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalStopProcs ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalStopProcs} = useContext(ModalContext); 
-console.log('ModalStopProcs 0 children:',children);
-console.log('ModalStopProcs 1 onClose:',onClose); 
-console.log('ModalStopProcs 32 {t1ModalStopProcs}:',{t1ModalStopProcs});
-console.log('ModalStopProcs 33 t1ModalStopProcs:',t1ModalStopProcs); 
+//console.log('ModalStopProcs 0 children:',children);
+//console.log('ModalStopProcs 1 onClose:',onClose); 
+//console.log('ModalStopProcs 32 {t1ModalStopProcs}:',{t1ModalStopProcs});
+//console.log('ModalStopProcs 33 t1ModalStopProcs:',t1ModalStopProcs); 
 let t1ModalStopProcsdecision=t1ModalStopProcs;
   return <div className='modal'>
     <div className='modal-content'>
@@ -42,7 +42,7 @@ let t1ModalStopProcsdecision=t1ModalStopProcs;
      </div>
 }
 export default function ModalPortal ({children,onClose}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

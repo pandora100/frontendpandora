@@ -9,11 +9,11 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalEditAlarmas ({ children,onClose,fila}) {
 
  const {t1ModalEditAlarmas} = useContext(ModalContext); 
-console.log('ModalEditAlarmas 0 children:',children);
-console.log('ModalEditAlarmas 1 onClose:',onClose); 
-console.log('ModalEditAlarmas 32 {t1ModalEditAlarmas}:',{t1ModalEditAlarmas});
-console.log('ModalEditAlarmas 33 t1ModalEditAlarmas:',t1ModalEditAlarmas); 
-console.log('ModalEditAlarmas 34 fila:',fila); 
+//console.log('ModalEditAlarmas 0 children:',children);
+//console.log('ModalEditAlarmas 1 onClose:',onClose); 
+//console.log('ModalEditAlarmas 32 {t1ModalEditAlarmas}:',{t1ModalEditAlarmas});
+//console.log('ModalEditAlarmas 33 t1ModalEditAlarmas:',t1ModalEditAlarmas); 
+//console.log('ModalEditAlarmas 34 fila:',fila); 
 let t1ModalEditAlarmasdecision=t1ModalEditAlarmas;
   return <div className='modal'>
     <div className='modal-content'>
@@ -40,7 +40,7 @@ let t1ModalEditAlarmasdecision=t1ModalEditAlarmas;
      </div>
 }
 export default function ModalPortal ({children,onClose,fila}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

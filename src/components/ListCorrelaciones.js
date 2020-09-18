@@ -14,7 +14,7 @@ const ListCorrelaciones = () => {
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('ListCorrelaciones 2 getCorrelaciones jsonData:',jsonData);
+      //console.log('ListCorrelaciones 2 getCorrelaciones jsonData:',jsonData);
       setCorrelaciones(jsonData);
     } catch (err) {
       console.error(err.message);
@@ -25,7 +25,7 @@ const ListCorrelaciones = () => {
     getCorrelaciones();
   }, []);
 
-  console.log('ListCorrelaciones 3 Correlaciones:',Correlaciones);
+  //console.log('ListCorrelaciones 3 Correlaciones:',Correlaciones);
   
  const options = {
     height:"250px",
@@ -38,7 +38,7 @@ const ListCorrelaciones = () => {
             { title: "Nombre del Grupo", field: "nombre_grupo",width:120}
         ];
   let datax = [...Correlaciones]; 
-   console.log('ListCorrelaciones 4 datax22:',datax);      
+   //console.log('ListCorrelaciones 4 datax22:',datax);      
  return (
    <React.Fragment>
              

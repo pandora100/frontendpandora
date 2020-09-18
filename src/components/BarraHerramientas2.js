@@ -1,7 +1,7 @@
 //BarraHerramientas2.js
 //<Link to='/ModalAgentes'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import sietecuatrocuatro from '../assets/sietecuatrocuatro.GIF';
+import ochonuevedos from '../assets/ochonuevedos.GIF';
 import './BarraHerramientas2.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalAgentes from "./ModalAgentes";
@@ -21,15 +21,11 @@ const BarraHerramientas2 = ({t1}) => {
                           
   return (
     <React.Fragment>
-     <section className="com__function_bar">
-        <div className="com__function_bar__button--disable">
+    
+       
     {isModalAgentesOpen && <ModalAgentes onClose={onClose}/>}
-        
-          <img onClick={onClose} className="com__function_bar__icon" src={sietecuatrocuatro} alt="xxxxxx" />
-          <span className="com__function_bar__text">{t1}</span>
+           <img   onClick={onClose} className="com__function_bar__icon" src={ochonuevedos} alt="xxxxxx" title="Insertar Agente"/>
           
-         </div>
-        </section>
     </React.Fragment>
   );
 };

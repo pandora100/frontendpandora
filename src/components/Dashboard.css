@@ -47,8 +47,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
 .Dashboard-Div-Barra-Container  {
   display: flex;
   flex-direction: row;
-  
-   align-items: stretch;
+  background:#B8B8B8;
 }
 .Dashboard-Div-Barra  {
   flex: 1;
@@ -61,6 +60,16 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     
     
   }
+.com__function_bar {
+   display: flex;
+    align-items: flex-start;
+    font-size: 11px;
+    padding: 1px 3px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+  
 .com__content {
     flex: 1;
     border: 1px solid rgba(0, 0, 0, 0.4);

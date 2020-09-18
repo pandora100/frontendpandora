@@ -7,25 +7,25 @@ const InputAgente = ({onClose}) => {
   const [description, setDescription] = useState("");
   const [grupo, setGrupo] = useState([]);
   const [grupoSeleccionado, setGrupoSeleccionado] = useState("");
-   console.log('InputAgente 01 description:',description);
-   console.log('InputAgente 02 grupo:',grupo);
+   //console.log('InputAgente 01 description:',description);
+   //console.log('InputAgente 02 grupo:',grupo);
   
  const handleChange= evt=>{
-  console.log('1 InputAgente 03 handleChange evt.target.value:', evt.target.value); 
+  //console.log('1 InputAgente 03 handleChange evt.target.value:', evt.target.value); 
   setDescription(evt.target.value);
 };
 
   const handleSubmit = async evt => {
-   console.log('InputAgente 04 evt:',evt);
+   //console.log('InputAgente 04 evt:',evt);
     evt.preventDefault();
   
-    console.log('InputAgente 05 evt.target.Agente.value:',evt.target.Agente.value);
-    console.log('InputAgente 06 evt.target.Agente.name:',evt.target.Agente.name);
+    //console.log('InputAgente 05 evt.target.Agente.value:',evt.target.Agente.value);
+    //console.log('InputAgente 06 evt.target.Agente.name:',evt.target.Agente.name);
   
      try {
-      console.log('InputAgente 07 description:',description);
+      //console.log('InputAgente 07 description:',description);
       const body = { description,grupoSeleccionado };
-      console.log('InputAgente 08 body:',body);
+      //console.log('InputAgente 08 body:',body);
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/agentes", {
         method: "POST",
           headers: {
@@ -40,7 +40,7 @@ const InputAgente = ({onClose}) => {
      
      //toast.success("Agente add Successfully");
      toast.success("Agente add Successfully:");
-     console.log('InputAgente 09 parseRes:',parseRes );
+     //console.log('InputAgente 09 parseRes:',parseRes );
      //window.location = "/dashboard";
      onClose();
 
@@ -52,33 +52,33 @@ const InputAgente = ({onClose}) => {
   };
 
   const obtenerInfoInicial= async ()=>{
-  console.log('InputAgente A obtenerInfoInicial ejecutandose.'); 
+  //console.log('InputAgente A obtenerInfoInicial ejecutandose.'); 
   try {
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('InputAgente B obtenerInfoInicial jsonData:',jsonData);
+      //console.log('InputAgente B obtenerInfoInicial jsonData:',jsonData);
       
        const gifs=jsonData.map(obj=>{
-       	console.log('InputAgente C obtenerInfoInicial obj:',obj);
+       	//console.log('InputAgente C obtenerInfoInicial obj:',obj);
         let nombre = obj.nombre;
         
        return nombre;
 
        
        });
-       console.log('InputAgente E obtenerInfoInicial gifs:',gifs);
+       //console.log('InputAgente E obtenerInfoInicial gifs:',gifs);
        setGrupo(gifs);
-       console.log('InputAgente F obtenerInfoInicial grupo:',grupo);
+       //console.log('InputAgente F obtenerInfoInicial grupo:',grupo);
     } catch (err) {
       console.error(err.message);
     }
 };
 
 const handleTypeChange = (e) => {
-console.log('InputAgente handleTypeChange value:',e.target.value);
+//console.log('InputAgente handleTypeChange value:',e.target.value);
 grupo[e.target.value];
 setGrupoSeleccionado(e.target.value);
 }

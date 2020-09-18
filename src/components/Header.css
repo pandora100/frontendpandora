@@ -1,14 +1,25 @@
 /*Header.css*/
-
+.gf-header-container {
+  width: 100%;
+}
 
 .gf-header-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color:  black;
-   margin: 0px 0px;
-  
+  margin: 0px 0px;
+  padding: 5px ;
 }
-.gf-header-container a{
+
+.gf-header-container-left a{
+   color: yellow;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 4px ;
+
+}
+.gf-header-container-right a{
    color: red;
   font-size: 18px;
   font-weight: 400;
@@ -17,6 +28,6 @@
 
 }
 
-.gf-header-container a + a {
+.gf-header-container-right a + a {
   margin: 0px 12px;
 }

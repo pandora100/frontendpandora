@@ -14,7 +14,7 @@ const ListModulos = () => {
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('ListModulos 2 getModulos jsonData:',jsonData);
+      //console.log('ListModulos 2 getModulos jsonData:',jsonData);
       setModulos(jsonData);
     } catch (err) {
       console.error(err.message);
@@ -25,7 +25,7 @@ const ListModulos = () => {
     getModulos();
   }, []);
 
-  console.log('ListModulos 3 Modulos:',Modulos);
+  //console.log('ListModulos 3 Modulos:',Modulos);
   
  const options = {
     height:"250px",
@@ -38,7 +38,7 @@ const ListModulos = () => {
             { title: "Nombre del Grupo", field: "nombre_grupo",width:120}
         ];
   let datax = [...Modulos]; 
-   console.log('ListModulos 4 datax22:',datax);      
+   //console.log('ListModulos 4 datax22:',datax);      
  return (
    <React.Fragment>
              

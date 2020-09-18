@@ -9,10 +9,10 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalCorrActivas ({ children,onCloseEdit}) {
 
  const {t1ModalCorrActivas} = useContext(ModalContext); 
-console.log('ModalCorrActivas 0 children:',children);
-console.log('ModalCorrActivas 1 onCloseEdit:',onCloseEdit); 
-console.log('ModalCorrActivas 32 {t1ModalCorrActivas}:',{t1ModalCorrActivas});
-console.log('ModalCorrActivas 33 t1ModalCorrActivas:',t1ModalCorrActivas); 
+//console.log('ModalCorrActivas 0 children:',children);
+//console.log('ModalCorrActivas 1 onCloseEdit:',onCloseEdit); 
+//console.log('ModalCorrActivas 32 {t1ModalCorrActivas}:',{t1ModalCorrActivas});
+//console.log('ModalCorrActivas 33 t1ModalCorrActivas:',t1ModalCorrActivas); 
 let t1ModalCorrActivasdecision=t1ModalCorrActivas;
   return <div className='modal'>
     <div className='modal-content'>
@@ -40,7 +40,7 @@ let t1ModalCorrActivasdecision=t1ModalCorrActivas;
      </div>
 }
 export default function ModalPortal ({children,onCloseEdit}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

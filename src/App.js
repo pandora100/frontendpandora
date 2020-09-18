@@ -67,7 +67,7 @@ function App() {
      <RemoteProvider>
     <Header/>
     
-        <div className="container">
+        <div className="container" >
          
           <Switch>
             <Route

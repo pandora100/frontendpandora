@@ -29,25 +29,25 @@ const InputDependencia = ({onClose}) => {
   const [utimestamp, setUtimestamp] = useState('');
   const [usercomment, setUsercomment] = useState('');
   /*
-  console.log('InputDependencia 01 tecnologias:',tecnologias);
-  console.log('InputDependencia 02 agentes:',agentes);
-  console.log('InputDependencia 03 modulos:',modulos);
-  console.log('InputDependencia 04 criticity:',criticity);
-  console.log('InputDependencia 05 estado:',estado);
-  console.log('InputDependencia 06 timestamp:',timestamp);
-  console.log('InputDependencia 07 utimestamp:',utimestamp);
- console.log('InputDependencia 07.5 Usercomment:',usercomment);
+  //console.log('InputDependencia 01 tecnologias:',tecnologias);
+  //console.log('InputDependencia 02 agentes:',agentes);
+  //console.log('InputDependencia 03 modulos:',modulos);
+  //console.log('InputDependencia 04 criticity:',criticity);
+  //console.log('InputDependencia 05 estado:',estado);
+  //console.log('InputDependencia 06 timestamp:',timestamp);
+  //console.log('InputDependencia 07 utimestamp:',utimestamp);
+ //console.log('InputDependencia 07.5 Usercomment:',usercomment);
   */
 
   const handleSubmit = async evt => {
   
     evt.preventDefault();
-    // console.log('InputDependencia 08 handleSubmit evt:',evt);
+    // //console.log('InputDependencia 08 handleSubmit evt:',evt);
     //////
      try {
     
       const body = { tecnologiasSeleccionado,agentesSeleccionado,modulosSeleccionado,criticitySeleccionado,estadoSeleccionado,timestamp,utimestamp,usercomment};
-      console.log('InputDependencia 12 body:',body);
+      //console.log('InputDependencia 12 body:',body);
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
         method: "POST",
           headers: {
@@ -62,7 +62,7 @@ const InputDependencia = ({onClose}) => {
      
      //toast.success("agentes add Successfully");
      toast.success("Alarma add Successfully:");
-     //console.log('InputDependencia 13 parseRes:',parseRes );
+     ////console.log('InputDependencia 13 parseRes:',parseRes );
      //window.location = "/dashboard";
      onClose();
 
@@ -73,46 +73,46 @@ const InputDependencia = ({onClose}) => {
   };
   
  const handleTimestamp = (e) => {
-//console.log('InputDependencia handleTimestamp value:',e.target.value);
+////console.log('InputDependencia handleTimestamp value:',e.target.value);
 
 timestamp[e.target.value];
 setTimestamp(e.target.value);
 } 
  const handleUtimestamp = (e) => {
-//console.log('InputDependencia handleUtimestamp value:',e.target.value);
+////console.log('InputDependencia handleUtimestamp value:',e.target.value);
 
 utimestamp[e.target.value];
 setUtimestamp(e.target.value);
 } 
 const handleUsercomment = (e) => {
-//console.log('InputDependencia handleUsercomment value:',e.target.value);
+////console.log('InputDependencia handleUsercomment value:',e.target.value);
 
 usercomment[e.target.value];
 setUsercomment(e.target.value);
 } 
 const handleTypeChangeTecnologias = (e) => {
-//console.log('InputDependencia handleTypeChangeTecnologias value:',e.target.value);
+////console.log('InputDependencia handleTypeChangeTecnologias value:',e.target.value);
 
 tecnologias[e.target.value];
 setTecnologiasSeleccionado(e.target.value);
 }
 const handleTypeChangeAgentes = (e) => {
-//console.log('InputDependencia handleTypeChangeAgentes value:',e.target.value);
+////console.log('InputDependencia handleTypeChangeAgentes value:',e.target.value);
 agentes[e.target.value];
 setAgentesSeleccionado(e.target.value);
 }
 const handleTypeChangeModulos = (e) => {
-//console.log('InputDependencia handleTypeChangeModulos value:',e.target.value);
+////console.log('InputDependencia handleTypeChangeModulos value:',e.target.value);
 modulos[e.target.value];
 setModulosSeleccionado(e.target.value);
 }
 const handleTypeChangeCriticity = (e) => {
-//console.log('InputDependencia handleTypeChangeCriticity value:',e.target.value);
+////console.log('InputDependencia handleTypeChangeCriticity value:',e.target.value);
 criticity[e.target.value];
 setCriticitySeleccionado(e.target.value);
 }
 const handleTypeChangeEstado = (e) => {
-//console.log('InputDependencia handleTypeChangeEstado value:',e.target.value);
+////console.log('InputDependencia handleTypeChangeEstado value:',e.target.value);
 estado[e.target.value];
 
 setEstadoSeleccionado(e.target.value);
@@ -120,6 +120,9 @@ setEstadoSeleccionado(e.target.value);
 
 useEffect (()=>{
 let CurrentDate = moment().format('YYYY-MM-DD HH:mm:ss');
+//let CurrentDate = moment().format('LLL');
+////console.log('InputDependencia useEffect CurrentDate:',CurrentDate);
+//let CurrentDate = moment().format('DD-MM-YYYY HH:mm:ss');
 //console.log('InputDependencia useEffect CurrentDate:',CurrentDate);
 moment().valueOf()
  setTimestamp(CurrentDate);

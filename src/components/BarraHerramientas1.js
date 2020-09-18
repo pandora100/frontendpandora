@@ -1,7 +1,7 @@
 //BarraHerramientas1.js
 //<Link to='/ModalTecnologias'></Link> 
 import React, { Fragment, useState,useContext } from "react";
-import tresunocero from '../assets/tresunocero.GIF';
+import earth from '../assets/earth.GIF';
 import './BarraHerramientas1.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalTecnologias from "./ModalTecnologias";
@@ -21,15 +21,13 @@ const BarraHerramientas1 = ({t1}) => {
                           
   return (
     <React.Fragment>
-     <section className="com__function_bar">
-        <div className="com__function_bar__button--disable">
+    
     {isModalTecnologiasOpen && <ModalTecnologias onClose={onClose}/>}
         
-          <img onClick={onClose} className="com__function_bar__icon" src={tresunocero} alt="xxxxxx" />
-          <span className="com__function_bar__text">{t1}</span>
+            <img onClick={onClose} className="com__function_bar__icon" src={earth} alt="xxxxxx" title="Insertar Tecnologia" />
+        
           
-         </div>
-        </section>
+      
     </React.Fragment>
   );
 };

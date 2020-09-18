@@ -12,7 +12,12 @@ let {Provider,Consumer}=RemoteContext;
   let [agentes, setAgentes] = React.useState([]);
   let [modulos, setModulos] = React.useState([]);
   let [estadisticas, setEstadisticas] = React.useState([]); 
-  
+  let [statusgifs, setStatusGifs] = React.useState('');
+  let [statustecnologias, setStatusTecnologias] = React.useState('');
+  let [statuscorrelaciones, setStatusCorrelaciones] = React.useState('');
+  let [statusagentes, setStatusAgentes] = React.useState('');
+  let [statusmodulos, setStatusModulos] = React.useState('');
+  let [statusestadisticas, setStatusEstadisticas] = React.useState(''); 
   const buscarGifs = async () => {
    
      try {
@@ -26,13 +31,15 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.post correlaciones 04 parseRes:',parseRes);
+     //console.log('router.post correlaciones 04 parseRes:',parseRes);
      setGifs(parseRes);
-     toast.success("Inicio de carga previa de data...");
+     //toast.success("Inicio de carga previa de data...");
+      setStatusGifs('Carga exitosa de data...');
       return parseRes;
     } catch (err) {
       console.error(err.message);
-       toast.error(parseRes);
+       setStatusGifs('Error en Carga de data:'+err.message);
+      toast.error(parseRes);
     }
 
   };
@@ -49,12 +56,14 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.get grupos 04 parseRes:',parseRes);
+     //console.log('router.get grupos 04 parseRes:',parseRes);
      setTecnologias(parseRes);
-     toast.success("Inicio de carga previa de tecnologias...");
+     setStatusTecnologias('Carga exitosa de Tecnologias...');
+     //toast.success("Inicio de carga previa de tecnologias...");
       return parseRes;
     } catch (err) {
       console.error(err.message);
+        setStatusTecnologias('Error en Carga de Tecnologias:'+err.message);
        toast.error(parseRes);
     }
 
@@ -72,12 +81,14 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.get grupos 04 parseRes:',parseRes);
+     //console.log('router.get grupos 04 parseRes:',parseRes);
      setCorrelaciones(parseRes);
-     toast.success("Inicio de carga previa de Correlaciones...");
+      setStatusCorrelaciones('Carga exitosa de Correlaciones...');
+     //toast.success("Inicio de carga previa de Correlaciones...");
       return parseRes;
     } catch (err) {
       console.error(err.message);
+       setStatusCorrelaciones('Error en Carga de Correlaciones:'+err.message);
        toast.error(parseRes);
     }
 
@@ -95,12 +106,14 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.get grupos 04 parseRes:',parseRes);
+     //console.log('router.get grupos 04 parseRes:',parseRes);
      setAgentes(parseRes);
-     toast.success("Inicio de carga previa de Agentes...");
+      setStatusAgentes('Carga exitosa de Agentes...');
+     //toast.success("Inicio de carga previa de Agentes...");
       return parseRes;
     } catch (err) {
       console.error(err.message);
+       setStatusAgentes('Error en Carga de Agentes:'+err.message);
        toast.error(parseRes);
     }
 
@@ -119,12 +132,14 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.get grupos 04 parseRes:',parseRes);
+     //console.log('router.get grupos 04 parseRes:',parseRes);
      setModulos(parseRes);
-     toast.success("Inicio de carga previa de Modulos...");
+     setStatusModulos('Carga exitosa de Modulos...');
+     //toast.success("Inicio de carga previa de Modulos...");
       return parseRes;
     } catch (err) {
       console.error(err.message);
+       setStatusModulos('Error en Carga de Modulos:'+err.message);
        toast.error(parseRes);
     }
 
@@ -143,12 +158,14 @@ let {Provider,Consumer}=RemoteContext;
       });
     
      const parseRes = await response.json();
-     console.log('router.get estadisticas 04 parseRes:',parseRes);
+     //console.log('router.get estadisticas 04 parseRes:',parseRes);
      setEstadisticas(parseRes);
-     toast.success("Inicio de carga previa de estadisticas...");
+     setStatusEstadisticas('Carga exitosa de estadisticas...');
+     //toast.success("Inicio de carga previa de estadisticas...");
       return parseRes;
     } catch (err) {
       console.error(err.message);
+       setStatusEstadisticas('Error en Carga de Estadisticas:'+err.message);
        toast.error(parseRes);
     }
     
@@ -164,7 +181,7 @@ let {Provider,Consumer}=RemoteContext;
 
     if (parseRes === true) { 
      
-    console.log('TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT');
+    //console.log('TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT');
     buscarGifs();
     buscarTecnologias();
     buscarCorrelaciones();
@@ -172,7 +189,7 @@ let {Provider,Consumer}=RemoteContext;
     buscarModulos();
     buscarEstadisticas();
    }else {
-    console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
+    //console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
    }
     
     } catch (err) {
@@ -189,7 +206,7 @@ let {Provider,Consumer}=RemoteContext;
    
    }, [checkAuthenticated2]);
 
-     return <Provider value={{ gifs,tecnologias,correlaciones,agentes,modulos,estadisticas }}>
+     return <Provider value={{ gifs,tecnologias,correlaciones,agentes,modulos,estadisticas, statusgifs,statustecnologias,statuscorrelaciones,statusagentes,statusmodulos,statusestadisticas }}>
     {children}
    
   </Provider>

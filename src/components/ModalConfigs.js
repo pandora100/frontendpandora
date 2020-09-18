@@ -11,10 +11,10 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalConfigs ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalConfigs} = useContext(ModalContext); 
-console.log('ModalConfigs 0 children:',children);
-console.log('ModalConfigs 1 onClose:',onClose); 
-console.log('ModalConfigs 32 {t1ModalConfigs}:',{t1ModalConfigs});
-console.log('ModalConfigs 33 t1ModalConfigs:',t1ModalConfigs); 
+//console.log('ModalConfigs 0 children:',children);
+//console.log('ModalConfigs 1 onClose:',onClose); 
+//console.log('ModalConfigs 32 {t1ModalConfigs}:',{t1ModalConfigs});
+//console.log('ModalConfigs 33 t1ModalConfigs:',t1ModalConfigs); 
 let t1ModalConfigsdecision=t1ModalConfigs;
   return <div className='modal'>
     <div className='modal-content'>
@@ -42,7 +42,7 @@ let t1ModalConfigsdecision=t1ModalConfigs;
      </div>
 }
 export default function ModalPortal ({children,onClose}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

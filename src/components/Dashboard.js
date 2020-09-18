@@ -1,9 +1,9 @@
-//Dashboard.js
+﻿//Dashboard.js
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import '@babel/polyfill';
 import './Dashboard.css'; 
-import PandoraHeader1 from "./PandoraHeader1.js";
+//import PandoraHeader1 from "./PandoraHeader1.js";
 import BarraPrincipal1 from "./BarraPrincipal1.js";
 import BarraPrincipal2 from "./BarraPrincipal2.js";
 import BarraHerramientas1 from "./BarraHerramientas1.js";
@@ -18,17 +18,14 @@ import BarraHerramientas6 from "./BarraHerramientas6.js";
 import BarraHerramientas7 from "./BarraHerramientas7.js";
 import BarraHerramientas8 from "./BarraHerramientas8.js";
 import BarraHerramientas9 from "./BarraHerramientas9.js";
-import Sidebar1 from "./Sidebar1.js";
+import BarraHerramientas10 from "./BarraHerramientas10.js";
+import BarraHerramientas11 from "./BarraHerramientas11.js";
+import BarraHerramientas12 from "./BarraHerramientas12.js";
 import Contenido1  from "./Contenido1.js";
 import Reviews  from "./Reviews.js";
 import Reviews2  from "./Reviews2.js";
 
- /*
- <BarraHerramientas1 t1="Add/Edit/Delete Evento" />
-       <BarraHerramientas1 t1="Add/Edit/Delete Correlacion" />
-       <BarraHerramientas1 t1="Configuraciones" />
-       <BarraHerramientas1 t1="Historico de Alarmas" />
-*/
+ 
 const Dashboard = ({setAuth}) => {
   const [name, setName] = useState("");
   const [dateTime, setDateTime] = useState(new Date());
@@ -68,22 +65,17 @@ const Dashboard = ({setAuth}) => {
     getProfile();
   }, []);
 // 
+//<button onClick={e => logout(e)} className="btn-btn-primary">
+        //Logout
+      //</button>
+//<BarraHerramientas9 t1="Config" />
   return (
     <div className="Dashboard-box">
-            <div className="Dashboard-box-header-container" >
-     
-     <PandoraHeader1/>
-     
-      <button onClick={e => logout(e)} className="btn-btn-primary">
-        Logout
-      </button>
-      
-
-           </div>
+    
          <div className="Dashboard-Div">
-          <BarraPrincipal1 titulo={`Modulo de Gestion de Correlaciones           Usuario: ${name} conectado el ${dateTime.toLocaleDateString()} a las ${dateTime.toLocaleTimeString()}`}/>
+         <BarraPrincipal1 titulo=""/>
         <div className="Dashboard-Div-Barra-Container">
-       
+       <div className="com__function_bar">
       
        <BarraHerramientas1 t1="Add Grupo" />
        <BarraHerramientasDel1 t1="Del Grupo" />
@@ -96,16 +88,20 @@ const Dashboard = ({setAuth}) => {
        <BarraHerramientas6 t1="StartProc" />
        <BarraHerramientas7 t1="StopProc" />
        <BarraHerramientas8 t1="Historico" />
-       <BarraHerramientas9 t1="Config" />
+       <BarraHerramientas9 t1="Config" /> 
+       <BarraHerramientas10 t1="Logout" logout={logout} />
+       <BarraHerramientas11 t1="Add Alarm" logout={logout} />
+       <BarraHerramientas12 t1="Del Alarm" logout={logout} />
+       <div style={{"height" : "18px","color" : "yellow" ,"background" : "black" , "marginLeft" : "50px", "fontWeight" : "600"}}>
+       {`Usuario ${name} conectado el ${dateTime.toLocaleDateString()} a las ${dateTime.toLocaleTimeString()}` }  
         </div>
-       
+        </div>
+        </div>
 
         <Reviews/> 
                         <div className="com__content__container">
                         <div className="com__content">
-                        <div className="com__content__inner__left">
-                        <Sidebar1/> 
-                        </div>
+                        
                         <div className="com__content__inner">
                         <Contenido1/> 
                         
@@ -114,7 +110,7 @@ const Dashboard = ({setAuth}) => {
                         </div>
                        </div>
                        <Reviews2/>
-                       <BarraPrincipal2 style={{"height" : "30px"}} titulo={`Modulo de desarrollado por la Coordinación de Integración de Redes y Sistemas de Movilnet de la Gerencia de Sistemas de Monitoreo`}/>  
+                       <BarraPrincipal2 style={{"height" : "30px"}} titulo={`Modulo de desarrollado por la Coordinación de Integración de Redes y Sistemas de Movilnet de la Gerencia de Sistemas de Monitoreo` }/>  
                  </div>
                       
       </div>

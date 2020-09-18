@@ -7,25 +7,25 @@ const InputAgenteDel = ({onClose}) => {
   const [description, setDescription] = useState("");
   const [grupo, setGrupo] = useState([]);
   const [grupoSeleccionado, setGrupoSeleccionado] = useState("");
-   console.log('InputAgenteDel 01 description:',description);
-   console.log('InputAgenteDel 02 grupo:',grupo);
+   //console.log('InputAgenteDel 01 description:',description);
+   //console.log('InputAgenteDel 02 grupo:',grupo);
   
  const handleChange= evt=>{
-  console.log('1 InputAgenteDel 03 handleChange evt.target.value:', evt.target.value); 
+  //console.log('1 InputAgenteDel 03 handleChange evt.target.value:', evt.target.value); 
   setDescription(evt.target.value);
 };
 
   const handleSubmit = async evt => {
-   console.log('InputAgenteDel 04 evt:',evt);
+   //console.log('InputAgenteDel 04 evt:',evt);
     evt.preventDefault();
   
-    console.log('InputAgenteDel 05 evt.target.Agente.value:',evt.target.Agente.value);
-    console.log('InputAgenteDel 06 evt.target.Agente.name:',evt.target.Agente.name);
+    //console.log('InputAgenteDel 05 evt.target.Agente.value:',evt.target.Agente.value);
+    //console.log('InputAgenteDel 06 evt.target.Agente.name:',evt.target.Agente.name);
   
      try {
-      console.log('InputAgenteDel 07 description:',description);
+      //console.log('InputAgenteDel 07 description:',description);
       const body = { description,grupoSeleccionado };
-      console.log('InputAgenteDel 08 body:',body);
+      //console.log('InputAgenteDel 08 body:',body);
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/agentes", {
         method: "DELETE",
           headers: {
@@ -39,7 +39,7 @@ const InputAgenteDel = ({onClose}) => {
      
      //toast.success("Agente add Successfully");
      toast.success("Agente deleted Successfully:");
-     console.log('InputAgenteDel 09 parseRes:',parseRes );
+     //console.log('InputAgenteDel 09 parseRes:',parseRes );
      //window.location = "/dashboard";
      onClose();
 
@@ -51,33 +51,33 @@ const InputAgenteDel = ({onClose}) => {
   };
 
   const obtenerInfoInicial= async ()=>{
-  console.log('InputAgenteDel A obtenerInfoInicial ejecutandose.'); 
+  //console.log('InputAgenteDel A obtenerInfoInicial ejecutandose.'); 
   try {
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('InputAgenteDel B obtenerInfoInicial jsonData:',jsonData);
+      //console.log('InputAgenteDel B obtenerInfoInicial jsonData:',jsonData);
       
        const gifs=jsonData.map(obj=>{
-       	console.log('InputAgenteDel C obtenerInfoInicial obj:',obj);
+       	//console.log('InputAgenteDel C obtenerInfoInicial obj:',obj);
         let nombre = obj.nombre;
         
        return nombre;
 
        
        });
-       console.log('InputAgenteDel E obtenerInfoInicial gifs:',gifs);
+       //console.log('InputAgenteDel E obtenerInfoInicial gifs:',gifs);
        setGrupo(gifs);
-       console.log('InputAgenteDel F obtenerInfoInicial grupo:',grupo);
+       //console.log('InputAgenteDel F obtenerInfoInicial grupo:',grupo);
     } catch (err) {
       console.error(err.message);
     }
 };
 
 const handleTypeChange = (e) => {
-console.log('InputAgenteDel handleTypeChange value:',e.target.value);
+//console.log('InputAgenteDel handleTypeChange value:',e.target.value);
 grupo[e.target.value];
 setGrupoSeleccionado(e.target.value);
 }

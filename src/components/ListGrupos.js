@@ -14,7 +14,7 @@ const ListGrupos = () => {
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('ListGrupos 2 getGrupos jsonData:',jsonData);
+      //console.log('ListGrupos 2 getGrupos jsonData:',jsonData);
       setGrupos(jsonData);
     } catch (err) {
       console.error(err.message);
@@ -25,7 +25,7 @@ const ListGrupos = () => {
     getGrupos();
   }, []);
 
-  console.log('ListGrupos 3 grupos:',grupos);
+  //console.log('ListGrupos 3 grupos:',grupos);
   /*
   return (
     <React.Fragment>
@@ -61,7 +61,7 @@ const ListGrupos = () => {
            
         ];
   let datax = [...grupos]; 
-   console.log('ListGrupos 4 datax2:',datax);      
+   //console.log('ListGrupos 4 datax2:',datax);      
  return (
    <React.Fragment>
              

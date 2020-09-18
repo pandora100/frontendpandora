@@ -11,10 +11,10 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalHistoricos ({ children,onClose}) {
  //<ListGrupos/> 
  const {t1ModalHistoricos} = useContext(ModalContext); 
-console.log('ModalHistoricos 0 children:',children);
-console.log('ModalHistoricos 1 onClose:',onClose); 
-console.log('ModalHistoricos 32 {t1ModalHistoricos}:',{t1ModalHistoricos});
-console.log('ModalHistoricos 33 t1ModalHistoricos:',t1ModalHistoricos); 
+//console.log('ModalHistoricos 0 children:',children);
+//console.log('ModalHistoricos 1 onClose:',onClose); 
+//console.log('ModalHistoricos 32 {t1ModalHistoricos}:',{t1ModalHistoricos});
+//console.log('ModalHistoricos 33 t1ModalHistoricos:',t1ModalHistoricos); 
 let t1ModalHistoricosdecision=t1ModalHistoricos;
   return <div className='modal'>
     <div className='modal-content'>
@@ -42,7 +42,7 @@ let t1ModalHistoricosdecision=t1ModalHistoricos;
      </div>
 }
 export default function ModalPortal ({children,onClose}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

@@ -2,7 +2,7 @@
 //<Link to='/ModalModulos'></Link> 
 import React, { Fragment, useState,useContext } from "react";
 
-import cincocuatroseis from '../assets/cincocuatroseis.GIF';
+import trescincosiete from '../assets/trescincosiete.GIF';
 import './BarraHerramientas3.css'
 import { Link, Redirect } from "react-router-dom";
 import ModalModulos from "./ModalModulos";
@@ -22,15 +22,11 @@ const BarraHerramientas3 = ({t1}) => {
                           
   return (
     <React.Fragment>
-     <section className="com__function_bar">
-        <div className="com__function_bar__button--disable">
+   
     {isModalModulosOpen && <ModalModulos onClose={onClose}/>}
-        
-          <img onClick={onClose} className="com__function_bar__icon" src={cincocuatroseis} alt="xxxxxx" />
-          <span className="com__function_bar__text">Add Mod</span>
+            <img onClick={onClose} className="com__function_bar__icon" src={trescincosiete} alt="xxxxxx" title="Insertar Modulo"/>
+         
           
-         </div>
-        </section>
     </React.Fragment>
   );
 };

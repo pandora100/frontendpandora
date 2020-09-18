@@ -17,10 +17,10 @@ const DashboardOriginal = ({setAuth}) => {
 
       const parseData = await res.json();
       setName(parseData.user_name);
-      console.log('DashboardOriginal 1 parseRes:',parseData); 
-      console.log('DashboardOriginal 2 name:',name); 
-      console.log('DashboardOriginal 3 localStorage.token:',localStorage.token);  
-      console.log('DashboardOriginal 4 setAuth:',setAuth);
+      //console.log('DashboardOriginal 1 parseRes:',parseData); 
+      //console.log('DashboardOriginal 2 name:',name); 
+      //console.log('DashboardOriginal 3 localStorage.token:',localStorage.token);  
+      //console.log('DashboardOriginal 4 setAuth:',setAuth);
        
     } catch (err) {
       console.error(err.message);

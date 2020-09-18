@@ -8,16 +8,16 @@ import './Reviews.css';
 import {RemoteContext} from "../context/RemotosContext.js"; 
  const Reviews=()=>{
  const {estadisticas} = useContext(RemoteContext); 
- console.log('!!!!!!!!!!!!!Reviews 00 RemoteContext:',RemoteContext);
- console.log('!!!!!!!!!!!!!Reviews 01 {estadisticas}:',{estadisticas});	
- console.log('!!!!!!!!!!!!!Reviews 02 Object.values(estadisticas):',Object.values(estadisticas));	
+ //console.log('!!!!!!!!!!!!!Reviews 00 RemoteContext:',RemoteContext);
+ //console.log('!!!!!!!!!!!!!Reviews 01 {estadisticas}:',{estadisticas});	
+ //console.log('!!!!!!!!!!!!!Reviews 02 Object.values(estadisticas):',Object.values(estadisticas));	
  const esta=Object.values(estadisticas);
 const estagifs=esta.map((estadis)=>{
 let estahuagsm=estadis.huagsm;
 let estahuaumts=estadis.huaumts;
 let estaflexent=estadis.flexent;
 return 	[estahuagsm,estahuaumts,estaflexent];
- console.log('!!!!!!!!!!!!!Reviews 03 estagifs:',estagifs);	
+ //console.log('!!!!!!!!!!!!!Reviews 03 estagifs:',estagifs);	
 });
 
 return (

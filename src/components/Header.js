@@ -1,24 +1,33 @@
 //Header.js
 import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
+import boliv2 from '../assets/boliv2.GIF';
 import './Header.css'
 const Header = () => {
   
   return (
-    <Fragment>
-    
+    <React.Fragment>
+      <div className='header-title-bar-img'>
+      <img src={boliv2}/>
+      
+      </div> 
      <div className='gf-header-container'>
-    
+      <div className='gf-header-container-left'>
+      <Link to='#'><i className="fas fa-tv"></i>
+        {" "}Administracion de Gestores Cirs & Sopoges
+        </Link>
+        </div>
+      <div className='gf-header-container-right'>  
       <Link to='/login'>
           Login
         </Link>
         <Link to='/register'>
           Register
         </Link>
-
+        </div>
    
     </div>
-    </Fragment>
+    </React.Fragment>
   );
 };
 

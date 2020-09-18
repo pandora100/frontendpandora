@@ -7,25 +7,25 @@ const InputCorrelacion = ({onClose}) => {
   const [description, setDescription] = useState("");
   const [grupo, setGrupo] = useState([]);
   const [grupoSeleccionado, setGrupoSeleccionado] = useState("");
-   console.log('InputCorrelacion 01 description:',description);
-   console.log('InputCorrelacion 02 grupo:',grupo);
+   //console.log('InputCorrelacion 01 description:',description);
+   //console.log('InputCorrelacion 02 grupo:',grupo);
   
  const handleChange= evt=>{
-  console.log('1 InputCorrelacion 03 handleChange evt.target.value:', evt.target.value); 
+  //console.log('1 InputCorrelacion 03 handleChange evt.target.value:', evt.target.value); 
   setDescription(evt.target.value);
 };
 
   const handleSubmit = async evt => {
-   console.log('InputCorrelacion 04 evt:',evt);
+   //console.log('InputCorrelacion 04 evt:',evt);
     evt.preventDefault();
   
-    console.log('InputCorrelacion 05 evt.target.Correlacion.value:',evt.target.Correlacion.value);
-    console.log('InputCorrelacion 06 evt.target.Correlacion.name:',evt.target.Correlacion.name);
+    //console.log('InputCorrelacion 05 evt.target.Correlacion.value:',evt.target.Correlacion.value);
+    //console.log('InputCorrelacion 06 evt.target.Correlacion.name:',evt.target.Correlacion.name);
   
      try {
-      console.log('InputCorrelacion 07 description:',description);
+      //console.log('InputCorrelacion 07 description:',description);
       const body = { description,grupoSeleccionado };
-      console.log('InputCorrelacion 08 body:',body);
+      //console.log('InputCorrelacion 08 body:',body);
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/Correlaciones", {
         method: "POST",
           headers: {
@@ -40,7 +40,7 @@ const InputCorrelacion = ({onClose}) => {
      
      //toast.success("Correlacion add Successfully");
      toast.success("Correlacion add Successfully:");
-     console.log('InputCorrelacion 09 parseRes:',parseRes );
+     //console.log('InputCorrelacion 09 parseRes:',parseRes );
      //window.location = "/dashboard";
      onClose();
 
@@ -52,33 +52,33 @@ const InputCorrelacion = ({onClose}) => {
   };
 
   const obtenerInfoInicial= async ()=>{
-  console.log('InputCorrelacion A obtenerInfoInicial ejecutandose.'); 
+  //console.log('InputCorrelacion A obtenerInfoInicial ejecutandose.'); 
   try {
       const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('InputCorrelacion B obtenerInfoInicial jsonData:',jsonData);
+      //console.log('InputCorrelacion B obtenerInfoInicial jsonData:',jsonData);
       
        const gifs=jsonData.map(obj=>{
-        console.log('InputCorrelacion C obtenerInfoInicial obj:',obj);
+        //console.log('InputCorrelacion C obtenerInfoInicial obj:',obj);
         let nombre = obj.nombre;
         
        return nombre;
 
        
        });
-       console.log('InputCorrelacion E obtenerInfoInicial gifs:',gifs);
+       //console.log('InputCorrelacion E obtenerInfoInicial gifs:',gifs);
        setGrupo(gifs);
-       console.log('InputCorrelacion F obtenerInfoInicial grupo:',grupo);
+       //console.log('InputCorrelacion F obtenerInfoInicial grupo:',grupo);
     } catch (err) {
       console.error(err.message);
     }
 };
 
 const handleTypeChange = (e) => {
-console.log('InputCorrelacion handleTypeChange value:',e.target.value);
+//console.log('InputCorrelacion handleTypeChange value:',e.target.value);
 grupo[e.target.value];
 setGrupoSeleccionado(e.target.value);
 }

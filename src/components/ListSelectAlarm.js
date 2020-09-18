@@ -15,7 +15,7 @@ const ListSelectAlarm = ({fila}) => {
           headers: {jwt_token: localStorage.token}
       });
       const jsonData = await response.json();
-      console.log('ListSelectAlarm 2 getSelectAlarm jsonData:',jsonData);
+      //console.log('ListSelectAlarm 2 getSelectAlarm jsonData:',jsonData);
       setSelectAlarm(jsonData);
     } catch (err) {
       console.error(err.message);
@@ -26,7 +26,7 @@ const ListSelectAlarm = ({fila}) => {
     getSelectAlarm();
   }, []);
 
-  console.log('ListSelectAlarm 3 selectAlarm:',selectAlarm);
+  //console.log('ListSelectAlarm 3 selectAlarm:',selectAlarm);
   
  const options = {
     height:"100px"
@@ -46,7 +46,7 @@ const ListSelectAlarm = ({fila}) => {
 
         ];
   let datax = [...selectAlarm]; 
-   console.log('ListSelectAlarm 4 datax22:',datax);      
+   //console.log('ListSelectAlarm 4 datax22:',datax);      
  return (
    <React.Fragment>
              

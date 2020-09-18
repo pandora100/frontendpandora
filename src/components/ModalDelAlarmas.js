@@ -9,10 +9,10 @@ import {ModalContext} from "../context/ModalesContext.js";
 function ModalDelAlarmas ({ children,onCloseDel}) {
 
  const {t1ModalDelAlarmas} = useContext(ModalContext); 
-console.log('ModalDelAlarmas 0 children:',children);
-console.log('ModalDelAlarmas 1 onCloseDel:',onCloseDel); 
-console.log('ModalDelAlarmas 32 {t1ModalDelAlarmas}:',{t1ModalDelAlarmas});
-console.log('ModalDelAlarmas 33 t1ModalDelAlarmas:',t1ModalDelAlarmas); 
+//console.log('ModalDelAlarmas 0 children:',children);
+//console.log('ModalDelAlarmas 1 onCloseDel:',onCloseDel); 
+//console.log('ModalDelAlarmas 32 {t1ModalDelAlarmas}:',{t1ModalDelAlarmas});
+//console.log('ModalDelAlarmas 33 t1ModalDelAlarmas:',t1ModalDelAlarmas); 
 
   return <div className='modal'>
     <div className='modal-content'>
@@ -39,7 +39,7 @@ console.log('ModalDelAlarmas 33 t1ModalDelAlarmas:',t1ModalDelAlarmas);
      </div>
 }
 export default function ModalPortal ({children,onCloseDel}) {
-  console.log('Dentro del ModalPortal....'); 
+  //console.log('Dentro del ModalPortal....'); 
  
   return ReactDOM.createPortal(
 

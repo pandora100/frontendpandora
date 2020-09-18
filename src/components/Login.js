@@ -20,7 +20,7 @@ const Login = ({ setAuth }) => {
     e.preventDefault();
     try {
       const body = { email, password };
-        console.log('Login 1 body:',body);
+        //console.log('Login 1 body:',body);
       const response = await fetch(
         "http://backendpandoragui.herokuapp.com/authentication/login",
         {
@@ -33,12 +33,12 @@ const Login = ({ setAuth }) => {
       );
 
       const parseRes = await response.json();
-      console.log('Login 2 parseRes:',parseRes);
+      //console.log('Login 2 parseRes:',parseRes);
       if (parseRes.jwtToken) {
         localStorage.setItem("token", parseRes.jwtToken);
         setAuth(true);
         toast.success("Logged in Successfully");
-         console.log('Login 3 localStorage.token:',localStorage.token);
+         //console.log('Login 3 localStorage.token:',localStorage.token);
       } else {
         setAuth(false);
         toast.error(parseRes);
