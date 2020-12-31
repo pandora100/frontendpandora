@@ -48,7 +48,7 @@ const InputDependencia = ({onClose}) => {
     
       const body = { tecnologiasSeleccionado,agentesSeleccionado,modulosSeleccionado,criticitySeleccionado,estadoSeleccionado,timestamp,utimestamp,usercomment};
       console.log('InputDependencia 12 body:',body);
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
+      const response = await fetch("http://localhost:5000/dashboard/eventos", {
         method: "POST",
           headers: {
             "Content-type": "application/json",

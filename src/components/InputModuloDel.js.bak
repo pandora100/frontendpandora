@@ -26,7 +26,7 @@ const InputModuloDel = ({onClose}) => {
       console.log('InputModuloDel 07 description:',description);
       const body = { description,grupoSeleccionado };
       console.log('InputModuloDel 08 body:',body);
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/modulos", {
+      const response = await fetch("http://localhost:5000/dashboard/modulos", {
         method: "DELETE",
           headers: {
             "Content-type": "application/json",
@@ -53,7 +53,7 @@ const InputModuloDel = ({onClose}) => {
   const obtenerInfoInicial= async ()=>{
   console.log('InputModuloDel A obtenerInfoInicial ejecutandose.'); 
   try {
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
+      const response = await fetch("http://localhost:5000/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

@@ -22,7 +22,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/eventos", {
+      const response = await fetch("http://localhost:5000/dashboard/eventos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -47,7 +47,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
+      const response = await fetch("http://localhost:5000/dashboard/grupos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -72,7 +72,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/correlaciones", {
+      const response = await fetch("http://localhost:5000/dashboard/correlaciones", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -97,7 +97,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/dependenciasagentes", {
+      const response = await fetch("http://localhost:5000/dashboard/dependenciasagentes", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -123,7 +123,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/dependenciasmodulos", {
+      const response = await fetch("http://localhost:5000/dashboard/dependenciasmodulos", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -149,7 +149,7 @@ let {Provider,Consumer}=RemoteContext;
    
      try {
      
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/estadisticas", {
+      const response = await fetch("http://localhost:5000/dashboard/estadisticas", {
         method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -172,7 +172,7 @@ let {Provider,Consumer}=RemoteContext;
   };
       const checkAuthenticated2 = async () => {
     try {
-      const res = await fetch("http://backendpandoragui.herokuapp.com/authentication/verify", {
+      const res = await fetch("http://localhost:5000/authentication/verify", {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });

@@ -9,7 +9,7 @@ const ListGrupos = () => {
 
   const getGrupos = async () => {
     try {
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
+      const response = await fetch("http://localhost:5000/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

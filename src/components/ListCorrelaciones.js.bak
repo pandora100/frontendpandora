@@ -1,31 +1,31 @@
-//ListModulos.js
+//ListCorrelaciones.js
 import React, { Fragment, useEffect, useState } from "react";
 import '@babel/polyfill';
 import { ReactTabulator } from "react-tabulator";
 import "../dist/css/tabulator.min.css";
-import './ListModulos.css'
-const ListModulos = () => {
-  const [Modulos, setModulos] = useState([]);
+import './ListCorrelaciones.css'
+const ListCorrelaciones = () => {
+  const [Correlaciones, setCorrelaciones] = useState([]);
 
-  const getModulos = async () => {
+  const getCorrelaciones = async () => {
     try {
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/modulos", {
+      const response = await fetch("http://localhost:5000/dashboard/Correlaciones", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('ListModulos 2 getModulos jsonData:',jsonData);
-      setModulos(jsonData);
+      console.log('ListCorrelaciones 2 getCorrelaciones jsonData:',jsonData);
+      setCorrelaciones(jsonData);
     } catch (err) {
       console.error(err.message);
     }
   };
 
   useEffect(() => {
-    getModulos();
+    getCorrelaciones();
   }, []);
 
-  console.log('ListModulos 3 Modulos:',Modulos);
+  console.log('ListCorrelaciones 3 Correlaciones:',Correlaciones);
   
  const options = {
     height:"250px",
@@ -34,11 +34,11 @@ const ListModulos = () => {
 };
  const columns = [
              { title: "Id", field: "id" , width:40},
-             { title: "Nombre del Modulo", field: "nombre_modulo", width:240 },
+             { title: "Nombre del Correlacion", field: "nombre_correlacion", width:240 },
             { title: "Nombre del Grupo", field: "nombre_grupo",width:120}
         ];
-  let datax = [...Modulos]; 
-   console.log('ListModulos 4 datax22:',datax);      
+  let datax = [...Correlaciones]; 
+   console.log('ListCorrelaciones 4 datax22:',datax);      
  return (
    <React.Fragment>
              
@@ -55,4 +55,4 @@ const ListModulos = () => {
 );
 };
 
-export default ListModulos;
+export default ListCorrelaciones;

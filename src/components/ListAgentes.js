@@ -9,7 +9,7 @@ const ListAgentes = () => {
 
   const getAgentes = async () => {
     try {
-      const response = await fetch("http://localhost:5000/dashboard/agentes", {
+      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/agentes", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });

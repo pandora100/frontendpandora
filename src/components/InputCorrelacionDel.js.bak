@@ -1,32 +1,32 @@
-//InputModuloDel.js
+//InputCorrelacionDel.js
 import React, { Fragment, useState, useEffect } from "react";
 import '@babel/polyfill';
 import { toast } from "react-toastify";
 
-const InputModuloDel = ({onClose}) => {
+const InputCorrelacionDel = ({onClose}) => {
   const [description, setDescription] = useState("");
   const [grupo, setGrupo] = useState([]);
   const [grupoSeleccionado, setGrupoSeleccionado] = useState("");
-   console.log('InputModuloDel 01 description:',description);
-   console.log('InputModuloDel 02 grupo:',grupo);
+   console.log('InputCorrelacionDel 01 description:',description);
+   console.log('InputCorrelacionDel 02 grupo:',grupo);
   
  const handleChange= evt=>{
-  console.log('1 InputModuloDel 03 handleChange evt.target.value:', evt.target.value); 
+  console.log('1 InputCorrelacionDel 03 handleChange evt.target.value:', evt.target.value); 
   setDescription(evt.target.value);
 };
 
   const handleSubmit = async evt => {
-   console.log('InputModuloDel 04 evt:',evt);
+   console.log('InputCorrelacionDel 04 evt:',evt);
     evt.preventDefault();
   
-    console.log('InputModuloDel 05 evt.target.Modulo.value:',evt.target.Modulo.value);
-    console.log('InputModuloDel 06 evt.target.Modulo.name:',evt.target.Modulo.name);
+    console.log('InputCorrelacionDel 05 evt.target.Correlacion.value:',evt.target.Correlacion.value);
+    console.log('InputCorrelacionDel 06 evt.target.Correlacion.name:',evt.target.Correlacion.name);
   
      try {
-      console.log('InputModuloDel 07 description:',description);
+      console.log('InputCorrelacionDel 07 description:',description);
       const body = { description,grupoSeleccionado };
-      console.log('InputModuloDel 08 body:',body);
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/modulos", {
+      console.log('InputCorrelacionDel 08 body:',body);
+      const response = await fetch("http://localhost:5000/dashboard/correlaciones", {
         method: "DELETE",
           headers: {
             "Content-type": "application/json",
@@ -37,9 +37,9 @@ const InputModuloDel = ({onClose}) => {
     
      const parseRes = await response.json();
      
-     //toast.success("Modulo add Successfully");
-     toast.success("Modulo deleted Successfully:");
-     console.log('InputModuloDel 09 parseRes:',parseRes );
+     //toast.success("Correlacion add Successfully");
+     toast.success("Correlacion deleted Successfully:");
+     console.log('InputCorrelacionDel 09 parseRes:',parseRes );
      //window.location = "/dashboard";
      onClose();
 
@@ -51,33 +51,33 @@ const InputModuloDel = ({onClose}) => {
   };
 
   const obtenerInfoInicial= async ()=>{
-  console.log('InputModuloDel A obtenerInfoInicial ejecutandose.'); 
+  console.log('InputCorrelacionDel A obtenerInfoInicial ejecutandose.'); 
   try {
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
+      const response = await fetch("http://localhost:5000/dashboard/grupos", {
         method: "GET",
         headers: { jwt_token: localStorage.token }
       });
       const jsonData = await response.json();
-      console.log('InputModuloDel B obtenerInfoInicial jsonData:',jsonData);
+      console.log('InputCorrelacionDel B obtenerInfoInicial jsonData:',jsonData);
       
        const gifs=jsonData.map(obj=>{
-        console.log('InputModuloDel C obtenerInfoInicial obj:',obj);
+        console.log('InputCorrelacionDel C obtenerInfoInicial obj:',obj);
         let nombre = obj.nombre;
         
        return nombre;
 
        
        });
-       console.log('InputModuloDel E obtenerInfoInicial gifs:',gifs);
+       console.log('InputCorrelacionDel E obtenerInfoInicial gifs:',gifs);
        setGrupo(gifs);
-       console.log('InputModuloDel F obtenerInfoInicial grupo:',grupo);
+       console.log('InputCorrelacionDel F obtenerInfoInicial grupo:',grupo);
     } catch (err) {
       console.error(err.message);
     }
 };
 
 const handleTypeChange = (e) => {
-console.log('InputModuloDel handleTypeChange value:',e.target.value);
+console.log('InputCorrelacionDel handleTypeChange value:',e.target.value);
 grupo[e.target.value];
 setGrupoSeleccionado(e.target.value);
 }
@@ -91,25 +91,25 @@ setGrupoSeleccionado(e.target.value);
    
   return (
     <React.Fragment>
-      
+     
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="Modulo"
+          name="Correlacion"
           value={description}
           onChange={handleChange}
-          placeholder="Introduzca nombre del modulo"
+          placeholder="Introduzca nombre de correlacion"
            style={{ "width" : "200px"}}
         />
        <select onChange={handleTypeChange}>
         {grupo.map((grup, key) => <option key={key} value={grup}>{grup}</option>)}
 
           </select>
-        <button type="submit">Eliminar Modulo</button>
+        <button type="submit">Eliminar Correlacion</button>
       </form>
 
     </React.Fragment>
   );
 };
 
-export default InputModuloDel;
+export default InputCorrelacionDel;

@@ -31,7 +31,7 @@ const InputGrupo = ({onClose}) => {
       console.log('InputGrupo 0009 description:',description);
       const body = { description };
       console.log('InputGrupo 10 body:',body);
-      const response = await fetch("http://backendpandoragui.herokuapp.com/dashboard/grupos", {
+      const response = await fetch("http://localhost:5000/dashboard/grupos", {
         method: "POST",
           headers: {
             "Content-type": "application/json",
